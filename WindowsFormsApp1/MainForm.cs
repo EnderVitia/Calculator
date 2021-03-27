@@ -86,5 +86,10 @@ namespace WindowsFormsApp1
         {
             label1.Text += 0;
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
