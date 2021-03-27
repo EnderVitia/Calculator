@@ -44,48 +44,98 @@ namespace WindowsFormsApp1
         {
             textBox1.Text = null;
             label1.Text = null;
+            a = 0;
+            PlusCount = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text += 1;
+            textBox1.Text += 1;
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            label1.Text += 2;
+            textBox1.Text += 2;
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            label1.Text += 3;
+            textBox1.Text += 3;
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            label1.Text += 4;
+            textBox1.Text += 4;
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            label1.Text += 5;
+            textBox1.Text += 5;
         }
         private void button6_Click(object sender, EventArgs e)
         {
-            label1.Text += 6;
+            textBox1.Text += 6;
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            label1.Text += 7;
+            textBox1.Text += 7;
         }
         private void button8_Click(object sender, EventArgs e)
         {
-            label1.Text += 8;
+            textBox1.Text += 8;
         }
         private void button9_Click(object sender, EventArgs e)
         {
-            label1.Text += 9;
+            textBox1.Text += 9;
         }
         private void button10_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += 0;
+        }
+        private void button14_Click(object sender, EventArgs e)
+        {
+            label1.Text += 0;
+        }
+        private void label1_Click(object sender, EventArgs e)
         {
             label1.Text += 0;
         }
 
+        private void buttonEnter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        bool PlusCount;
+        int a;
+        private void buttonPlus_Click(object sender, EventArgs e)
+        {
+            if (PlusCount == false)
+            {
+                a = Int32.Parse(textBox1.Text);
+                label1.Text = textBox1.Text;
+                label1.Text += " + ";
+                textBox1.Text = null;
+
+                PlusCount = true;
+            }
+            else
+            {
+                int b = Int32.Parse(textBox1.Text);
+                a += b;
+                label1.Text = a.ToString();
+                label1.Text += " + ";
+                textBox1.Text = null;
+
+            }
+
+
+        }
+
+        private void buttonMinus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMultiply_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
