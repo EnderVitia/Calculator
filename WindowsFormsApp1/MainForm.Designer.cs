@@ -188,7 +188,7 @@
             this.buttonDevide.TabIndex = 13;
             this.buttonDevide.Text = "/";
             this.buttonDevide.UseVisualStyleBackColor = true;
-            this.buttonDevide.Click += new System.EventHandler(this.button14_Click);
+            this.buttonDevide.Click += new System.EventHandler(this.buttonDevide_Click);
             // 
             // button15
             // 

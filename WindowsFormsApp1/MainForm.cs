@@ -88,10 +88,6 @@ namespace WindowsFormsApp1
         {
             textBox1.Text += 0;
         }
-        private void button14_Click(object sender, EventArgs e)
-        {
-            label1.Text += 0;
-        }
         private void label1_Click(object sender, EventArgs e)
         {
             label1.Text += 0;
@@ -99,28 +95,67 @@ namespace WindowsFormsApp1
 
         private void buttonEnter_Click(object sender, EventArgs e)
         {
-
+            if (label1.Text.Last<char>() == '+')
+            {
+                float b = Convert.ToSingle(textBox1.Text);
+                a += b;
+                label1.Text = a.ToString();
+                textBox1.Text = a.ToString();
+                a = 0;
+                b = 0;
+                PlusCount = false;
+            }
+            if (label1.Text.Last<char>() == '-')
+            {
+                float b = Convert.ToSingle(textBox1.Text);
+                a -= b;
+                label1.Text = a.ToString();
+                textBox1.Text = a.ToString();
+                a = 0;
+                b = 0;
+                MinusCount = false;
+            }
+            if (label1.Text.Last<char>() == '*')
+            {
+                float b = Convert.ToSingle(textBox1.Text);
+                a *= b;
+                label1.Text = a.ToString();
+                textBox1.Text = a.ToString();
+                a = 0;
+                b = 0;
+                MultiplyCount = false;
+            }
+            if (label1.Text.Last<char>() == '/')
+            {
+                float b = Convert.ToSingle(textBox1.Text);
+                a /= b;
+                label1.Text = a.ToString();
+                textBox1.Text = a.ToString();
+                a = 0;
+                b = 0;
+                MultiplyCount = false;
+            }
         }
 
         bool PlusCount;
-        int a;
+        float a;
         private void buttonPlus_Click(object sender, EventArgs e)
         {
             if (PlusCount == false)
             {
-                a = Int32.Parse(textBox1.Text);
+                a = Convert.ToSingle(textBox1.Text);
                 label1.Text = textBox1.Text;
-                label1.Text += " + ";
+                label1.Text += " +";
                 textBox1.Text = null;
 
                 PlusCount = true;
             }
             else
             {
-                int b = Int32.Parse(textBox1.Text);
+                float b = Convert.ToSingle(textBox1.Text);
                 a += b;
                 label1.Text = a.ToString();
-                label1.Text += " + ";
+                label1.Text += " +";
                 textBox1.Text = null;
 
             }
@@ -128,14 +163,73 @@ namespace WindowsFormsApp1
 
         }
 
+        bool MinusCount;
         private void buttonMinus_Click(object sender, EventArgs e)
         {
+            if (MinusCount == false)
+            {
+                a = Convert.ToSingle(textBox1.Text);
+                label1.Text = textBox1.Text;
+                label1.Text += " -";
+                textBox1.Text = null;
+
+                MinusCount = true;
+            }
+            else
+            {
+                float b = Convert.ToSingle(textBox1.Text);
+                a -= b;
+                label1.Text = a.ToString();
+                label1.Text += " -";
+                textBox1.Text = null;
+
+            }
+        }
+
+        bool MultiplyCount;
+        private void buttonMultiply_Click(object sender, EventArgs e)
+        {
+            if (MultiplyCount == false)
+            {
+                a = Convert.ToSingle(textBox1.Text);
+                label1.Text = textBox1.Text;
+                label1.Text += " *";
+                textBox1.Text = null;
+
+                MultiplyCount = true;
+            }
+            else
+            {
+                float b = Convert.ToSingle(textBox1.Text);
+                a *= b;
+                label1.Text = a.ToString();
+                label1.Text += " *";
+                textBox1.Text = null;
+
+            }
 
         }
 
-        private void buttonMultiply_Click(object sender, EventArgs e)
+        bool DevideCount;
+        private void buttonDevide_Click(object sender, EventArgs e)
         {
+            if (DevideCount == false)
+            {
+                a = Convert.ToSingle(textBox1.Text);
+                label1.Text = textBox1.Text;
+                label1.Text += " /";
+                textBox1.Text = null;
+                DevideCount = true;
+            }
+            else
+            {
+                float b = Convert.ToSingle(textBox1.Text);
+                a /= b;
+                label1.Text = a.ToString();
+                label1.Text += " *";
+                textBox1.Text = null;
 
+            }
         }
     }
 }
