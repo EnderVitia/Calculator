@@ -42,12 +42,14 @@
             this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonMultiply = new System.Windows.Forms.Button();
             this.buttonDevide = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.buttonSqrt = new System.Windows.Forms.Button();
+            this.buttonSqr = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.DeleteAll = new System.Windows.Forms.Button();
+            this.buttonDot = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -142,7 +144,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(2, 176);
+            this.button10.Location = new System.Drawing.Point(83, 176);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 23);
             this.button10.TabIndex = 9;
@@ -190,23 +192,25 @@
             this.buttonDevide.UseVisualStyleBackColor = true;
             this.buttonDevide.Click += new System.EventHandler(this.buttonDevide_Click);
             // 
-            // button15
+            // buttonSqrt
             // 
-            this.button15.Location = new System.Drawing.Point(83, 176);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "sqrt";
-            this.button15.UseVisualStyleBackColor = true;
+            this.buttonSqrt.Location = new System.Drawing.Point(83, 205);
+            this.buttonSqrt.Name = "buttonSqrt";
+            this.buttonSqrt.Size = new System.Drawing.Size(75, 23);
+            this.buttonSqrt.TabIndex = 14;
+            this.buttonSqrt.Text = "sqrt";
+            this.buttonSqrt.UseVisualStyleBackColor = true;
+            this.buttonSqrt.Click += new System.EventHandler(this.buttonSqrt_Click);
             // 
-            // button16
+            // buttonSqr
             // 
-            this.button16.Location = new System.Drawing.Point(164, 176);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 15;
-            this.button16.Text = "sqr";
-            this.button16.UseVisualStyleBackColor = true;
+            this.buttonSqr.Location = new System.Drawing.Point(2, 205);
+            this.buttonSqr.Name = "buttonSqr";
+            this.buttonSqr.Size = new System.Drawing.Size(75, 23);
+            this.buttonSqr.TabIndex = 15;
+            this.buttonSqr.Text = "sqr";
+            this.buttonSqr.UseVisualStyleBackColor = true;
+            this.buttonSqr.Click += new System.EventHandler(this.buttonSqr_Click);
             // 
             // textBox1
             // 
@@ -239,7 +243,7 @@
             // 
             // DeleteAll
             // 
-            this.DeleteAll.Location = new System.Drawing.Point(122, 205);
+            this.DeleteAll.Location = new System.Drawing.Point(3, 176);
             this.DeleteAll.Name = "DeleteAll";
             this.DeleteAll.Size = new System.Drawing.Size(75, 23);
             this.DeleteAll.TabIndex = 19;
@@ -247,17 +251,39 @@
             this.DeleteAll.UseVisualStyleBackColor = true;
             this.DeleteAll.Click += new System.EventHandler(this.DeleteAll_Click);
             // 
+            // buttonDot
+            // 
+            this.buttonDot.Location = new System.Drawing.Point(165, 205);
+            this.buttonDot.Name = "buttonDot";
+            this.buttonDot.Size = new System.Drawing.Size(75, 23);
+            this.buttonDot.TabIndex = 21;
+            this.buttonDot.Text = ",";
+            this.buttonDot.UseVisualStyleBackColor = true;
+            this.buttonDot.Click += new System.EventHandler(this.buttonDot_Click);
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(164, 176);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 22;
+            this.buttonBack.Text = "<--";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 235);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.buttonDot);
             this.Controls.Add(this.DeleteAll);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
+            this.Controls.Add(this.buttonSqr);
+            this.Controls.Add(this.buttonSqrt);
             this.Controls.Add(this.buttonDevide);
             this.Controls.Add(this.buttonMultiply);
             this.Controls.Add(this.buttonMinus);
@@ -295,12 +321,14 @@
         private System.Windows.Forms.Button buttonMinus;
         private System.Windows.Forms.Button buttonMultiply;
         private System.Windows.Forms.Button buttonDevide;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button buttonSqrt;
+        private System.Windows.Forms.Button buttonSqr;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button DeleteAll;
+        private System.Windows.Forms.Button buttonDot;
+        private System.Windows.Forms.Button buttonBack;
     }
 }
 

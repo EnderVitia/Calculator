@@ -95,45 +95,52 @@ namespace WindowsFormsApp1
 
         private void buttonEnter_Click(object sender, EventArgs e)
         {
-            if (label1.Text.Last<char>() == '+')
+            try
             {
-                float b = Convert.ToSingle(textBox1.Text);
-                a += b;
-                label1.Text = a.ToString();
-                textBox1.Text = a.ToString();
-                a = 0;
-                b = 0;
-                PlusCount = false;
+                if (label1.Text.Last<char>() == '+')
+                {
+                    float b = Convert.ToSingle(textBox1.Text);
+                    a += b;
+                    label1.Text = a.ToString();
+                    textBox1.Text = a.ToString();
+                    a = 0;
+                    b = 0;
+                    PlusCount = false;
+                }
+                if (label1.Text.Last<char>() == '-')
+                {
+                    float b = Convert.ToSingle(textBox1.Text);
+                    a -= b;
+                    label1.Text = a.ToString();
+                    textBox1.Text = a.ToString();
+                    a = 0;
+                    b = 0;
+                    MinusCount = false;
+                }
+                if (label1.Text.Last<char>() == '*')
+                {
+                    float b = Convert.ToSingle(textBox1.Text);
+                    a *= b;
+                    label1.Text = a.ToString();
+                    textBox1.Text = a.ToString();
+                    a = 0;
+                    b = 0;
+                    MultiplyCount = false;
+                }
+                if (label1.Text.Last<char>() == '/')
+                {
+                    float b = Convert.ToSingle(textBox1.Text);
+                    a /= b;
+                    label1.Text = a.ToString();
+                    textBox1.Text = a.ToString();
+                    a = 0;
+                    b = 0;
+                    MultiplyCount = false;
+                }
             }
-            if (label1.Text.Last<char>() == '-')
+            catch
             {
-                float b = Convert.ToSingle(textBox1.Text);
-                a -= b;
-                label1.Text = a.ToString();
-                textBox1.Text = a.ToString();
-                a = 0;
-                b = 0;
-                MinusCount = false;
-            }
-            if (label1.Text.Last<char>() == '*')
-            {
-                float b = Convert.ToSingle(textBox1.Text);
-                a *= b;
-                label1.Text = a.ToString();
-                textBox1.Text = a.ToString();
-                a = 0;
-                b = 0;
-                MultiplyCount = false;
-            }
-            if (label1.Text.Last<char>() == '/')
-            {
-                float b = Convert.ToSingle(textBox1.Text);
-                a /= b;
-                label1.Text = a.ToString();
-                textBox1.Text = a.ToString();
-                a = 0;
-                b = 0;
-                MultiplyCount = false;
+                label1.Text = "Введите оператор";
             }
         }
 
@@ -230,6 +237,35 @@ namespace WindowsFormsApp1
                 textBox1.Text = null;
 
             }
+        }
+
+        private void buttonSqrt_Click(object sender, EventArgs e)
+        {
+            a = Convert.ToSingle(textBox1.Text);
+            a = Convert.ToSingle(Math.Sqrt(a));
+            label1.Text = a.ToString();
+            textBox1.Text = a.ToString();
+
+        }
+
+        private void buttonSqr_Click(object sender, EventArgs e)
+        {
+            a = Convert.ToSingle(textBox1.Text);
+            a = Convert.ToSingle(Math.Pow(a, 2));
+            label1.Text = a.ToString();
+            textBox1.Text = a.ToString();
+
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            int len = textBox1.Text.Length;
+            textBox1.Text = textBox1.Text.Remove(len-1);
+        }
+
+        private void buttonDot_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += ',';
         }
     }
 }
